@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Consulta de Funcionários</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Consulta de Funcionários</h1>
+    </div>
+
+    <img src="{{ url_for('static', filename='images/torre_topo.png') }}" alt="Logo" class="logo"> 
+
+    <form action="/submit" method="POST">
+        <label for="matricula">Número de Matrícula:</label>
+        <input type="text" id="matricula" name="matricula" required>
+
+        <label for="data_admissao">Data de Admissão:</label>
+        <input type="text" id="data_admissao" name="data_admissao" placeholder="DD/MM/AAAA" required>
+
+        <input type="submit" value="Pesquisar">
+    </form>
+
+    <div class="resultado" style="margin-top: 30px;">
+        {% if resultado %}
+            <p><strong>Funcionário:</strong> <span style="font-size: 18px;">{{ resultado.nome }}</span></p>
+            <p><strong>Matrícula:</strong> <span style="font-size: 18px;">{{ resultado.matricula }}</span></p>
+            <p><strong>Admitido em:</strong> <span style="font-size: 18px;">{{ resultado.data_de_admissao }}</span></p>
+        {% endif %}
+    </div>
+</body>
+</html>

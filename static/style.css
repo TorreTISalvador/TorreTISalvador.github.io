@@ -1,0 +1,82 @@
+/* resetando margens e preenchimento padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* stilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100vh; /* Altura total da viewport */
+}
+
+/* stilo para a barra de título */
+.header {
+    background-color: #155724; /* Verde escuro */
+    color: white;
+    text-align: center;
+    padding: 10px; /* Reduzir o espaçamento interno */
+    font-size: 24px; /* Tamanho da fonte */
+    width: 100%; /* Largura total da barra */
+    position: fixed; /* Fixa a barra na parte superior */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona no canto esquerdo */
+}
+
+/* stilo para a imagem */
+.logo {
+    display: block; /* Faz a imagem se comportar como um bloco */
+    margin: 80px auto 20px; /* Margem acima de 80px para distância da barra, abaixo de 20px e centraliza horizontalmente */
+    max-width: 8%; /* Define um tamanho máximo para a imagem reduzida a 8% */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* stilo para o formulário */
+form {
+    max-width: 400px; /* Largura máxima do formulário */
+    background-color: white; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* stilo para os rotulos e inputs */
+label {
+    display: block; /* Exibir em bloco para cada rótulo */
+    margin-bottom: 5px; /* Margem abaixo do rótulo */
+}
+
+input[type="text"] {
+    width: 100%; /* Largura total do campo */
+    padding: 10px; /* Espaçamento interno */
+    margin-bottom: 15px; /* Margem abaixo do campo */
+    border: 1px solid #ccc; /* Borda suave */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* stilo para o botão de envio */
+input[type="submit"] {
+    background-color: #28a745; /* Verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor em forma de mão */
+    width: 100%; /* Largura total do botão */
+}
+
+input[type="submit"]:hover {
+    background-color: #218838; /* Verde mais escuro ao passar o mouse */
+}
+
+/* stilo para o resultado da pesquisa */
+.resultado p {
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    margin: 5px 0; /* Margem acima e abaixo do parágrafo */
+}
